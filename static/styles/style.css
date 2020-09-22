@@ -1,0 +1,70 @@
+header {
+   padding: 20px;
+   margin: -8px;
+   background: #263443;
+}
+
+body {
+   background: #263443;
+   font-family: "SF UI Display", "Helvetica Neue", "Helvetica", "Roboto";
+}
+
+.logo {
+   background: #263443;
+   padding: 0px;
+   margin-left: 100px;
+   border: 0px;
+}
+.logo:focus{
+   outline: 0px;
+}
+
+#instructions{
+   background: #F0F0F0;
+   align-content: center;
+   padding: 20px;
+   padding-left: 50px;
+   padding-right: 50px;
+   margin-top: 20px;
+   margin-left: 250px;
+   margin-right: 250px;
+   font-weight: medium;
+   box-shadow: 0px 10px 20px rgb(27, 27, 27);
+   color: #4B4B4B;
+   font-size: 18px;
+}
+
+#instruction-title{
+   font-size: 25px;
+   font-weight: 400;
+   color: black;
+}
+
+.instruction-bold{
+   font-weight: 600;
+}
+
+
+.choose-file{
+   display: inline-block;
+   margin: auto;
+   align-content: center;
+   padding: 12px;
+   padding-left: 30px;
+   padding-right: 30px;
+   margin-top: 25px;
+   margin-bottom: 20px;
+   content: 'Select some files';
+   background: #1FBEA5;
+   border: 0px;
+   color: white;
+   font-size: 18px;
+   border-radius: 50px;
+   cursor: pointer;
+}
+.choose-file:hover{
+   background: rgb(24, 143, 125);
+}
+.choose-file:focus{
+   outline:0;
+}

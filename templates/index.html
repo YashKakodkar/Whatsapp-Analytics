@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block body %}
+<div id="instructions">
+   <p id="instruction-title">To find your WhatsApp chat analytics:</p>
+   <p>1. Open WhatsApp on your phone</p>
+   <p>2. Open the chat you want to get its analytics of</p>
+   <p>3. Tap on the <b class="instruction-bold">Name</b> of the chat and scroll down to tap on <b
+         class="instruction-bold">Export Chat</b></p>
+   <p>4. Select <b class="instruction-bold">Without Media</b></p>
+   <p>5. Select your method of sharing to yourself via <b class="instruction-bold">AirDrop, Email, Dropbox</b> or any
+      other <b class="instruction-bold">service</b></p>
+   <p>6. Download the shared zip file on your computer and <b class="instruction-bold">unzip</b> it</p>
+   <p>7. <b class="instruction-bold">Upload</b> the file down below</p>
+
+   <form id="upload-form" action="{{url_for('analytics')}}" method="POST" enctype="multipart/form-data">
+
+
+      <input type="file" name="file" accept="text/plain">
+      <input type="submit" value="send">
+
+
+
+
+      <!--<a style="text-decoration:none" href='analytics'>
+         <input class="choose-file" type="button" value="Choose File">
+      </a>-->
+   </form>
+
+
+</div>
+{% endblock %}

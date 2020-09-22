@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<head>
+   <title>WhatsApp Analytics</title>
+   <link rel="stylesheet" type="text/css" href="../static/styles/style.css">
+   <link rel="stylesheet" type="text/css" href="../static/styles/analytics.css">
+   <link rel="shortcut icon" type="image/png" href="../static/assets/favicon.png" />
+</head>
+
+<body>
+   <header id="header">
+      <!--<button class="logo" onclick="location.href='index.html'">
+         <img src="{{url_for('static', filename='assets/WhatsApp Analytics Logo.png')}}" height=43px width=233px>
+      </button>-->
+      <a class="logo" href="index.html">
+         <img src="../static/assets/WhatsApp Analytics Logo.png" height=43px width=233px>
+      </a>
+
+   </header>
+   <h2 id="analytics-title">Chat Analytics</h2>
+
+   <div class="analytics-div" id="basic-facts">
+      <p>Basic Information</p>
+      <p>{{ line }}</p>
+   </div>
+   <div class="analytics-div" id="members">
+      <p>Members</p>
+   </div>
+   <div class="analytics-div" id="chat-activity">
+      <p>Chat Activity</p>
+   </div>
+</body>

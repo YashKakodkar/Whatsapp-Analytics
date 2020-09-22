@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<h2 id="analytics-title">Chat Analytics</h2>
+
+<div class="analytics-div" id="basic-info">
+   <table id="basicInfoTable">
+      <tr class="basicInfo">
+         <th class="basicInfo">Name</th>
+         <th class="basicInfo">Type</th>
+         <th class="basicInfo">Date Created</th>
+         <th class="basicInfo">Total Messages</th>
+         <th class="basicInfo">Current Members</th>
+      </tr>
+      <tr class="basicInfo">
+         <td class="basicInfo">{{ chat_name }}</td>
+         <td class="basicInfo">{{ chat_type }}</td>
+         <td class="basicInfo">{{ date_created }}</td>
+         <td class="basicInfo">{{ messages_sent }}</td>
+         <td class="basicInfo">{{ members }}</td>
+      </tr>
+   </table>
+</div>
+
+<div class="analytics-div" id="members">
+   <h3 class="div-title">Members</h3>
+
+   <table id="memberTable">
+      <tr>
+         <th>Name</th>
+         <th>Status</th>
+         <th>Messages</th>
+         <th>Added</th>
+         <th>Removed</th>
+         <th>Left</th>
+      </tr>
+   </table>
+
+   <div class="messagePieChartContainer">
+      <canvas id="messagePieChart"></canvas>
+   </div>
+   <script>
+      var jsonData = JSON.parse('{{ data | tojson | safe}}');
+      var labels = jsonData.chatLog.map(function (e) {
+         return e.date;
+      });
+
+      var colors = ['#25D366', '#34B7F1', '#128C7E', '#FF8F00',
+         '#F54949', '#F0D342', '#D32978', '#A96DFF',
+         '#CAEDAF', '#5F1010', '#FE98E0', '#A7E4FF',
+         '#5217B1', '#FFFFFF', '#1C41A9', '#5F3822',
+         '#609335', '#646464', '#CF9965', '#00FFB9'];
+      memberTable()
+      memberPieChart()
+   </script>
+</div>
+
+<div class="analytics-div" id="member-activity">
+   <h3 class="div-title">Member Activity</h3>
+   <canvas id="memberChart" style="padding-bottom: 5px"></canvas>
+   <canvas id="memberBarChart"></canvas>
+   <script>
+      memberActivityChart()
+   </script>
+</div>
+
+<div class="analytics-div" id="chat-activity">
+   <h3 class="div-title">Chat Activity</h3>
+   <canvas id="myChart"></canvas>
+   <script>
+      activityChart()
+   </script>
+</div>
+
+
+
+{% endblock %}

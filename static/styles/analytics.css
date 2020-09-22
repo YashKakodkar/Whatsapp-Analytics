@@ -1,0 +1,105 @@
+#analytics-title{
+    margin-left: 110px;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+}
+ 
+.analytics-div{
+    background: #334255;
+    align-content: center;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: 110px;
+    margin-right: 110px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.5);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+ 
+h3.div-title{
+    font-weight: 500;
+}
+ 
+#basic-info{
+    background-color: transparent;
+    box-shadow: none; 
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: -10px;
+    margin-bottom: -20px;
+}
+ 
+#basicInfoTable, th.basicInfo, td.basicInfo, tr.basicInfo{
+    border: 0px solid white;
+    padding: 0px;
+    padding-bottom: 5px;
+}   
+#basicInfoTable {   
+    font-size: 19px;
+    font-weight: 400;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    color: #1FBEA5;
+ 
+}
+th.basicInfo{
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+}
+td.basicInfo{
+    width: 10%;
+}
+
+tr.basicInfo:hover {background-color: transparent;}
+tr.basicInfo:hover {background-color: transparent;}
+ 
+div.messagePieChartContainer{
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    bottom: 50%;
+    width: 50%;
+    height: 400px;
+}
+
+
+#memberTable{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px; 
+    font-weight: 400;
+    border-collapse: collapse;
+    width: 50%;
+    margin-left: -10px;
+}
+ 
+tr:hover {background-color: #36475c;}
+ 
+th{
+    font-weight: 500;
+    font-size: 16px;
+}
+ 
+td, th {
+    vertical-align: middle;
+    text-align: left;
+    padding: 10px;
+}
+ 
+td.active{
+    font-size: 12px; 
+    font-weight: 600px;
+    color: #9AFF85;
+}
+ 
+td.inactive {
+    font-size: 12px;
+    font-weight: 600;
+    color: #F73D3D;
+}
